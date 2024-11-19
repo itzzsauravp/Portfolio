@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import SharedLayout from "./layout/SharedLayout";
-import LandingPage from "./Pages/LandingPage";
+import LandingPage from "./pages/LandingPage";
 import TechStack from "./pages/TechStack";
 import CursorEffect from "./components/CursorEffect";
 const App = () => {

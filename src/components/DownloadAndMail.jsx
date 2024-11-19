@@ -23,6 +23,7 @@ const DownloadAndMail = () => {
       </a>
       <a
         href={mailToLink}
+        target="_blank"
         className="px-5 py-2 bg-transparent border border-iOrange rounded-md"
       >
         <span className="flex items-center gap-2">

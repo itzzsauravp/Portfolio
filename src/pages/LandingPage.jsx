@@ -1,14 +1,14 @@
 import { useState } from "react";
-import Skills from "../components/Skills";
 import Projects from "../components/Projects";
 import Education from "../components/Education";
 import DownloadAndMail from "../components/DownloadAndMail";
+import Skills from "../components/Skills";
 const LandingPage = () => {
   const [showDetails, setShowDetails] = useState(false);
   return (
     <section>
       <div className="w-full md:w-[85%] lg:w-[65%] xl:w-[50%] 2xl:w-[35%] m-auto dark:text-black">
-        <p className="text-xl relative mt-12">
+        <p className="text-xl relative mt-10">
           Hey there! I’m
           <span className="text-iOrange"> Saurav Parajulee</span>, an
           undergraduate Computer Science student passionate about exploring the
