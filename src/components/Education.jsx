@@ -13,7 +13,7 @@ const Education = () => {
       gpa: "N/A",
     },
     {
-      education: "Higher School",
+      education: "High School",
       faculty: "+2 Science (Physics)",
       studiedAt: "Trinity International College",
       start: "2017",
@@ -26,14 +26,14 @@ const Education = () => {
   );
   return (
     <div className="mt-7">
-      <span className="flex py-2  text-2xl gap-2 items-center font-semibold uppercase border-iOrange border-b">
+      <span className="flex py-2 text-xl lg:text-3xl gap-2 items-center font-semibold uppercase border-iOrange border-b">
         <FaBookOpen />
         Education
       </span>
       {EducationDetails.map((edu, idx) => (
         <div
           key={idx}
-          className="text-xl border-b py-2 mt-2 cursor-pointer"
+          className="text-xl border-b dark:border-black py-2 mt-2 cursor-pointer"
           onClick={() =>
             setOpenAccordion((prev) => {
               const newState = [...prev].map((item, i) =>
@@ -55,7 +55,7 @@ const Education = () => {
             <span
               className={`${
                 !openAccordion[idx] && "hover:translate-x-4"
-              } duration-200 ease-in-out`}
+              } duration-200 ease-in-out text-lg`}
             >
               {edu.education}
             </span>
@@ -63,22 +63,22 @@ const Education = () => {
           <div
             className={`${
               openAccordion[idx] ? "max-h-[500px] py-2" : "max-h-0"
-            } overflow-hidden transition-all duration-500 ease-in-out text-[1rem] px-6`}
+            } overflow-hidden transition-all duration-500 ease-in-out text-[1rem] px-6 text-sm`}
           >
             <p>
-              <span className="font-semibold">Faculty:</span> {edu.faculty}
+              <strong>Faculty:</strong> {edu.faculty}
             </p>
             <p>
-              <span className="font-semibold">At:</span> {edu.studiedAt}
+              <strong>At:</strong> {edu.studiedAt}
             </p>
             <p>
-              <span className="font-semibold">Start:</span> {edu.start}
+              <strong>Start:</strong> {edu.start}
             </p>
             <p>
-              <span className="font-semibold">Graduate:</span> {edu.graduate}
+              <strong>Graduate:</strong> {edu.graduate}
             </p>
             <p>
-              <span className="font-semibold">GPA:</span> {edu.gpa}
+              <strong>GPA:</strong> {edu.gpa}
             </p>
           </div>
         </div>
