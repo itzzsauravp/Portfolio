@@ -10,21 +10,22 @@ import { FaHome } from "react-icons/fa";
 import { CiLight } from "react-icons/ci";
 import { CiDark } from "react-icons/ci";
 import { useEffect } from "react";
-
+import { motion } from "motion/react";
+import ToolTip from "./ToolTip";
 const NavigationBar = () => {
   const SOCIALS = [
     {
-      name: "Discord",
+      name: "fnrrwastaken",
       icon: <FaDiscord />,
       link: "https://discord.gg/BPWVQuJe",
     },
     {
-      name: "Linkedin",
+      name: "itzzsauravp",
       icon: <FaLinkedin />,
       link: "https://www.linkedin.com/in/itzzsauravp/",
     },
     {
-      name: "Github",
+      name: "itzzsauravp",
       icon: <FaGithub />,
       link: "https://github.com/itzzsauravp",
     },
@@ -48,24 +49,44 @@ const NavigationBar = () => {
     rootElem.classList.toggle("dark");
   }, [darkMode]);
   return (
-    <nav className="text-3xl flex items-center justify-between w-full md:w-[85%] lg:w-[65%] xl:w-[50%] 2xl:w-[35%] m-auto gap-3 dark:text-black">
+    <motion.nav
+      className="text-3xl flex items-center justify-between w-full md:w-[85%] lg:w-[65%] xl:w-[50%] 2xl:w-[35%] m-auto gap-3 dark:text-black"
+      initial={{
+        y: -100,
+        opacity: 0,
+      }}
+      animate={{
+        y: 0,
+        opacity: 1,
+      }}
+      transition={{
+        duration: 0.3,
+        ease: "easeOut",
+      }}
+    >
       <RxHamburgerMenu
         className="cursor-pointer lg:hidden"
         onClick={() => setOpenMenu(true)}
       />
-      {openMenu && <HamburgerNavigation setOpenMenu={setOpenMenu} />}
-      <div className="uppercase hidden lg:flex gap-3 items-center">
+      {openMenu && (
+        <HamburgerNavigation
+          setOpenMenu={setOpenMenu}
+          darkMode={darkMode}
+          setDarkMode={setDarkMode}
+        />
+      )}
+      <div className="uppercase hidden lg:flex gap-5 items-center">
         {Navigation.map((l, i) => (
           <NavLink
             key={i}
             to={l.to}
-            className="cursor-pointer p-2 rounded-md hover:bg-white hover:text-black duration-200 ease-out"
+            className="cursor-pointer inline-block p-2 hover:bg-white rounded-full hover:text-black duration-200 ease-out"
           >
             {l.icon}
           </NavLink>
         ))}
         <div
-          className="cursor-pointer p-1 h-10 w-10 rounded-full hover:bg-white hover:text-black duration-200 ease-out flex items-center justify-center "
+          className="cursor-pointer h-11 w-11 p-1 hover:bg-white rounded-full hover:text-black duration-200 ease-out flex items-center justify-center"
           onClick={() => setDarkMode(!darkMode)}
         >
           {darkMode ? <CiLight /> : <CiDark />}
@@ -73,17 +94,18 @@ const NavigationBar = () => {
       </div>
       <div className="flex gap-3">
         {SOCIALS.map((item, index) => (
-          <a
-            key={index}
-            className="cursor-pointer p-2 rounded-md hover:bg-white hover:text-black duration-200 ease-out"
-            href={`${item.link}`}
-            target="_blank"
-          >
-            {item.icon}
-          </a>
+          <ToolTip key={index} name={item.name}>
+            <a
+              className="cursor-pointer inline-block p-2 rounded-full hover:bg-white hover:text-black duration-200 ease-out"
+              href={`${item.link}`}
+              target="_blank"
+            >
+              {item.icon}
+            </a>
+          </ToolTip>
         ))}
       </div>
-    </nav>
+    </motion.nav>
   );
 };
 

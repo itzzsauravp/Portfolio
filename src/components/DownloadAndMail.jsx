@@ -12,22 +12,22 @@ const DownloadAndMail = () => {
   return (
     <div className="mt-7 w-full flex items-center justify-center gap-3 p-4">
       <a
-        className="px-4 py-2 bg-iOrange rounded-md"
+        className="px-4 py-2 bg-iOrange rounded-md shadow-xl"
         href="/myResume.pdf"
         target="_blank"
       >
         <span className="flex items-center gap-2">
-          <span>Download CV</span>
+          <span className="text-sm">Download CV</span>
           <GoDownload />
         </span>
       </a>
       <a
         href={mailToLink}
         target="_blank"
-        className="px-5 py-2 bg-transparent border border-iOrange rounded-md"
+        className="px-5 py-2 bg-transparent border border-iOrange rounded-md shadow-xl"
       >
         <span className="flex items-center gap-2">
-          <span>Email Me</span>
+          <span className="text-sm">Email Me</span>
           <MdOutlineEmail />
         </span>
       </a>

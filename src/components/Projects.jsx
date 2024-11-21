@@ -2,13 +2,14 @@ import ProjectCard from "./ProjectCard";
 import { GrProjects } from "react-icons/gr";
 import { useState } from "react";
 import { useEffect } from "react";
+
 const Projects = () => {
   const [currIndex, setCurrIndex] = useState(0);
   const ProjectDetails = [
     {
-      name: "Artist Management System",
-      desc: "A web application for managing users, artists, and songs. Features include role-based access control, CRUD operations via raw SQL, user authentication, and a user-friendly dashboard for efficient management. Built without ORM for direct database interaction ",
-      link: "https://github.com/itzzsauravp/Artist-Management-System",
+      name: "Vision UI Dashboard",
+      desc: "Trying to create the Vision UI Dashboard (uses materialUI) from scratch (without materialUI).",
+      link: "https://github.com/itzzsauravp/Vision-UI-Dashboard",
     },
     {
       name: "E-com",
@@ -16,9 +17,9 @@ const Projects = () => {
       link: "https://github.com/itzzsauravp/E-Com",
     },
     {
-      name: "Vision UI Dashboard",
-      desc: "Trying to create the Vision UI Dashboard (uses materialUI) from scratch (without materialUI).",
-      link: "https://github.com/itzzsauravp/Vision-UI-Dashboard",
+      name: "Artist Management System",
+      desc: "A web application for managing users, artists, and songs. Features include role-based access control, CRUD operations via raw SQL, user authentication,Built without ORM for direct database interaction (incomplete) ",
+      link: "https://github.com/itzzsauravp/Artist-Management-System",
     },
     {
       name: "TeamSync",
@@ -37,7 +38,7 @@ const Projects = () => {
 
   return (
     <div className="mt-7">
-      <span className="flex py-2 text-2xl gap-2 items-center font-semibold uppercase border-iOrange border-b">
+      <span className="flex py-2 text-xl lg:text-3xl gap-2 items-center font-semibold uppercase border-iOrange border-b">
         <GrProjects />
         Projects
       </span>
