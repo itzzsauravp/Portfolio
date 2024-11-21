@@ -5,8 +5,8 @@ const useMousePosition = () => {
   const [isMouseOutside, setIsMouseOutside] = useState(false);
   useEffect(() => {
     const updateMousePosition = (e) => {
-      const xCord = e.clientX;
-      const yCord = e.clientY;
+      const xCord = e.clientX + window.scrollX;
+      const yCord = e.clientY + window.scrollY;
       setCoordinates({ x: xCord, y: yCord });
       const docHeight = document.documentElement.clientHeight;
       const docWidth = document.documentElement.clientWidth;
@@ -17,9 +17,10 @@ const useMousePosition = () => {
       }
     };
     window.addEventListener("mousemove", updateMousePosition);
-
+    window.addEventListener("wheel", updateMousePosition);
     return () => {
       window.removeEventListener("mousemove", updateMousePosition);
+      window.addEventListener("wheel", updateMousePosition);
     };
   }, []);
   return { coordinates, isMouseOutside };
