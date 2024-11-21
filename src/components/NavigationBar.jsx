@@ -45,6 +45,9 @@ const NavigationBar = () => {
   const [openMenu, setOpenMenu] = useState(false);
   const [darkMode, setDarkMode] = useState(true);
   useEffect(() => {
+    setDarkMode(false);
+  }, []);
+  useEffect(() => {
     const rootElem = document.documentElement;
     rootElem.classList.toggle("dark");
   }, [darkMode]);

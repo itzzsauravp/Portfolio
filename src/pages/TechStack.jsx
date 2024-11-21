@@ -64,7 +64,7 @@ const TechStack = () => {
           duration: 0.7,
         }}
       >
-        <h1 className="text-xl uppercase mt-12 md:text-2xl lg:text-2xl">
+        <h1 className="text-xl uppercase mt-4 md:text-2xl lg:text-2xl">
           Tech Stack
         </h1>
         <p className="italic text-slate-500 mt-2 text-sm lg:text-[1rem]">

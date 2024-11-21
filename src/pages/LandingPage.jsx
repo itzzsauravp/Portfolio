@@ -4,6 +4,7 @@ import Education from "../components/Education";
 import DownloadAndMail from "../components/DownloadAndMail";
 import Skills from "../components/Skills";
 import { motion } from "motion/react";
+import Hobbies from "../components/Hobbies";
 const LandingPage = () => {
   const [showDetails, setShowDetails] = useState(false);
   return (
@@ -20,7 +21,7 @@ const LandingPage = () => {
             duration: 1,
           }}
         >
-          <p className="text-lg lg:text-xl relative mt-10">
+          <p className="text-lg lg:text-xl relative mt-4">
             Hey there! I’m
             <span className="text-iOrange"> Saurav Parajulee</span>, an
             undergraduate Computer Science student passionate about exploring
@@ -83,6 +84,7 @@ const LandingPage = () => {
           <Skills />
           <Projects />
           <Education />
+          <Hobbies />
           <DownloadAndMail />
         </motion.div>
       </div>
