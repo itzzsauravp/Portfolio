@@ -90,7 +90,7 @@ const TechStack = () => {
           <h1 className="text-xl text-iOrange sm:text-2xl">{obj.category}</h1>
           <div className="grid grid-cols-2 gap-2 mt-2 flex-wrap">
             {obj.items.map((tech, i) => (
-              <motion.div
+              <div
                 key={i}
                 className="flex items-center gap-4 w-auto rounded-md p-2 border dark:border-black cursor-pointer hover:bg-iOrange duration-100 ease-out"
               >
@@ -98,7 +98,7 @@ const TechStack = () => {
                   {tech.icon}
                 </div>
                 <p className="text-sm sm:text-lg lg:text-2xl">{tech.name}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </motion.div>
