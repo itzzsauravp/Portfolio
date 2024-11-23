@@ -1,56 +1,6 @@
-import { FaPython, FaNode, FaGitSquare, FaYarn } from "react-icons/fa";
-import { TbBrandFramerMotion } from "react-icons/tb";
-import { FaJava } from "react-icons/fa6";
-import { SiExpress, SiAxios, SiVite, SiNpm, SiNodemon } from "react-icons/si";
-import { BiLogoPostgresql } from "react-icons/bi";
-import { SiMysql, SiPostman } from "react-icons/si";
 import { motion } from "motion/react";
-
+import { TechStackDetails } from "../data/staticDataReactIcons";
 const TechStack = () => {
-  const TechStackDetails = [
-    {
-      category: "Languages",
-      items: [
-        { name: "Python", icon: <FaPython /> },
-        { name: "Java", icon: <FaJava /> },
-      ],
-    },
-    {
-      category: "Frameworks & Libraries",
-      items: [
-        { name: "Express", icon: <SiExpress /> },
-        { name: "Axios", icon: <SiAxios /> },
-        { name: "Motion", icon: <TbBrandFramerMotion /> },
-      ],
-    },
-    {
-      category: "Database",
-      items: [
-        { name: "Postgresql", icon: <BiLogoPostgresql /> },
-        { name: "MySQL", icon: <SiMysql /> },
-      ],
-    },
-    {
-      category: "Run Time",
-      items: [
-        {
-          name: "NodeJs",
-          icon: <FaNode />,
-        },
-      ],
-    },
-    {
-      category: "Tools/Other Platforms",
-      items: [
-        { name: "Git", icon: <FaGitSquare /> },
-        { name: "Vite", icon: <SiVite /> },
-        { name: "Npm", icon: <SiNpm /> },
-        { name: "Yarn", icon: <FaYarn /> },
-        { name: "Nodemon", icon: <SiNodemon /> },
-        { name: "Postman", icon: <SiPostman /> },
-      ],
-    },
-  ];
   return (
     <div className="w-full md:w-[85%] lg:w-[65%] xl:w-[50%] 2xl:w-[35%] m-auto dark:text-black">
       <motion.div

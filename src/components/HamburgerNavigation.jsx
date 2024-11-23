@@ -2,16 +2,7 @@ import { MdCancel } from "react-icons/md";
 import { NavLink } from "react-router-dom";
 import { CiLight } from "react-icons/ci";
 import { CiDark } from "react-icons/ci";
-const Navigation = [
-  {
-    name: "Home",
-    to: "/",
-  },
-  {
-    name: "Tech",
-    to: "/tech-stack",
-  },
-];
+import { Navigation } from "../data/staticData";
 const HamburgerNavigation = ({ setOpenMenu, darkMode, setDarkMode }) => {
   return (
     <div className="fixed top-0 left-0 h-screen w-full bg-iOrange dark:bg-white opacity-95 flex items-center justify-center z-10">

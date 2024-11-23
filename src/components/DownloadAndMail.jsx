@@ -10,10 +10,10 @@ const DownloadAndMail = () => {
   )}&body=${encodeURIComponent(body)}`;
 
   return (
-    <div className="mt-4 w-full flex items-center justify-center gap-3 p-4">
+    <div className="mt-0 w-full flex items-center justify-center gap-3 p-4">
       <a
         className="px-4 py-2 bg-iOrange rounded-md shadow-xl"
-        href="/myResume.pdf"
+        href="/cv-sauravp.pdf"
         target="_blank"
       >
         <span className="flex items-center gap-2">

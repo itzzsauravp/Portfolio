@@ -5,6 +5,7 @@ import DownloadAndMail from "../components/DownloadAndMail";
 import Skills from "../components/Skills";
 import { motion } from "motion/react";
 import Hobbies from "../components/Hobbies";
+import Footer from "../components/Footer";
 const LandingPage = () => {
   const [showDetails, setShowDetails] = useState(false);
   return (
@@ -81,11 +82,12 @@ const LandingPage = () => {
           animate={{ y: 0 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
         >
+          <DownloadAndMail />
           <Skills />
           <Projects />
           <Education />
           <Hobbies />
-          <DownloadAndMail />
+          <Footer />
         </motion.div>
       </div>
     </section>

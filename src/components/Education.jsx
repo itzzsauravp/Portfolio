@@ -1,31 +1,13 @@
 import { FaBookOpen } from "react-icons/fa";
 import { IoIosArrowDown } from "react-icons/io";
 import { useState } from "react";
-
+import { EducationDetails } from "../data/staticData";
 const Education = () => {
-  const EducationDetails = [
-    {
-      education: "Bachelor",
-      faculty: "Bsc.CSIT",
-      studiedAt: "Kathmandu Bernhardt College",
-      start: "2021",
-      graduate: "2025",
-      gpa: "N/A",
-    },
-    {
-      education: "High School",
-      faculty: "+2 Science (Physics)",
-      studiedAt: "Trinity International College",
-      start: "2017",
-      graduate: "2019",
-      gpa: "2.96",
-    },
-  ];
   const [openAccordion, setOpenAccordion] = useState(
     Array(EducationDetails.length).fill(false)
   );
   return (
-    <div className="mt-7">
+    <div className="mt-5">
       <span className="flex py-2 text-xl lg:text-3xl gap-2 items-center font-semibold uppercase border-iOrange border-b">
         <FaBookOpen />
         Education

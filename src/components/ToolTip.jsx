@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "motion/react";
-const ToolTip = ({ children, name }) => {
+const ToolTip = ({ children, name, toolTipBoxTW, toolTipPointerTW }) => {
   const [isVisible, setVisible] = useState(false);
   return (
     <div
@@ -11,7 +11,7 @@ const ToolTip = ({ children, name }) => {
       {children}
       {isVisible && (
         <motion.div
-          className="absolute py-1 px-2 z-10 dark:border-iOrange bottom-[-40px] left-1/2 translate-x-[-50%] dark:bg-black dark:text-white bg-iOrange p-1 rounded-md text-sm shadow-lg border "
+          className={`absolute py-1 px-2 z-10 dark:border-iOrange left-1/2 translate-x-[-50%] dark:bg-black dark:text-white bg-iOrange p-1 rounded-md text-sm shadow-lg border ${toolTipBoxTW}`}
           initial={{
             opacity: 0,
           }}
@@ -23,7 +23,9 @@ const ToolTip = ({ children, name }) => {
           }}
         >
           {name}
-          <div className="bg-iOrange dark:border-iOrange border-t border-l dark:bg-black h-3 w-3 absolute -z-10 top-[-7px] left-1/2 translate-x-[-50%] rotate-45"></div>
+          <div
+            className={`bg-iOrange dark:border-iOrange dark:bg-black h-3 w-3 absolute -z-10  left-1/2 translate-x-[-50%] rotate-45 ${toolTipPointerTW}`}
+          ></div>
         </motion.div>
       )}
     </div>
