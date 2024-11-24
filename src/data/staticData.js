@@ -27,21 +27,3 @@ export const Navigation = [
     to: "/tech-stack",
   },
 ];
-
-export const ProjectDetails = [
-  {
-    name: "Vision UI Dashboard",
-    desc: "Trying to create the Vision UI Dashboard (uses materialUI) from scratch (without materialUI).",
-    link: "https://github.com/itzzsauravp/Vision-UI-Dashboard",
-  },
-  {
-    name: "E-com",
-    desc: "A frontend e-commerce project powered by FakeStoreAPI, showcasing statemanagement techniques using Redux, Redux Toolkit, and Context API.",
-    link: "https://github.com/itzzsauravp/E-Com",
-  },
-  {
-    name: "TeamSync",
-    desc: "A chatbased communication platform with task management built into it.",
-    link: "https://github.com/itzzsauravp/TeamSync",
-  },
-];

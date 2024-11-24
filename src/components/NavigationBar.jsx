@@ -49,13 +49,13 @@ const NavigationBar = () => {
           <NavLink
             key={i}
             to={l.to}
-            className="cursor-pointer inline-block p-2 hover:bg-white rounded-full hover:text-black duration-200 ease-out"
+            className="cursor-pointer inline-block p-2 can-hover:hover:bg-white rounded-full can-hover:hover:text-black duration-200 ease-out"
           >
             {l.icon}
           </NavLink>
         ))}
         <div
-          className="cursor-pointer h-11 w-11 p-1 hover:bg-white rounded-full hover:text-black duration-200 ease-out flex items-center justify-center"
+          className="cursor-pointer h-11 w-11 p-1 can-hover:hover:bg-white rounded-full can-hover:hover:text-black duration-200 ease-out flex items-center justify-center"
           onClick={() => setDarkMode(!darkMode)}
         >
           {darkMode ? <CiLight /> : <CiDark />}
@@ -70,7 +70,7 @@ const NavigationBar = () => {
             toolTipPointerTW="top-[-7px] border-t border-l"
           >
             <a
-              className="cursor-pointer inline-block p-2 rounded-full hover:bg-white hover:text-black duration-200 ease-out"
+              className="cursor-pointer inline-block p-2 rounded-full can-hover:hover:bg-white can-hover:hover:text-black duration-200 ease-out"
               href={`${item.link}`}
               target="_blank"
             >

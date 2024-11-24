@@ -1,7 +1,7 @@
 import useMousePosition from "../hooks/useMousePosition";
 const CursorEffect = () => {
-  const { coordinates, isMouseOutside } = useMousePosition();
-  return isMouseOutside ? null : (
+  const { isMobileDevice, coordinates } = useMousePosition();
+  return isMobileDevice ? null : (
     <div
       className="absolute rounded-full pointer-events-none bg-iOrange h-28 w-28 z-[-999] blur-3xl "
       style={{

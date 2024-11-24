@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <div className="flex justify-center mt-4 space-x-3">
-      <p>
+      <p className="text-center text-sm">
         Made using <span className="font-bold">React</span> and{" "}
         <span className="font-bold">Tailwind</span>
         {" "}code available{" "}

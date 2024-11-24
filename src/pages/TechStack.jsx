@@ -42,7 +42,7 @@ const TechStack = () => {
             {obj.items.map((tech, i) => (
               <div
                 key={i}
-                className="flex items-center gap-4 w-auto rounded-md p-2 border dark:border-black cursor-pointer hover:bg-iOrange duration-100 ease-out"
+                className="flex items-center gap-4 w-auto rounded-md p-2 border dark:border-black cursor-pointer can-hover:hover:bg-iOrange duration-100 ease-out"
               >
                 <div className="text-3xl sm:text-4xl lg:text-5xl">
                   {tech.icon}

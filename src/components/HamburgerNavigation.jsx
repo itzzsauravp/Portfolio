@@ -18,7 +18,7 @@ const HamburgerNavigation = ({ setOpenMenu, darkMode, setDarkMode }) => {
           </NavLink>
         ))}
         <div
-          className="absolute right-9 top-8 text-4xl cursor-pointer p-1 rounded-full hover:bg-white hover:text-black duration-200 ease-out flex items-center justify-center"
+          className="absolute right-9 top-8 text-4xl cursor-pointer p-1 rounded-full can-hover:hover:bg-white can-hover:hover:text-black duration-200 ease-out flex items-center justify-center"
           onClick={() => setDarkMode(!darkMode)}
         >
           {darkMode ? <CiLight /> : <CiDark />}

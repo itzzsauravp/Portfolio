@@ -11,7 +11,7 @@ const ToolTip = ({ children, name, toolTipBoxTW, toolTipPointerTW }) => {
       {children}
       {isVisible && (
         <motion.div
-          className={`absolute py-1 px-2 z-10 dark:border-iOrange left-1/2 translate-x-[-50%] dark:bg-black dark:text-white bg-iOrange p-1 rounded-md text-sm shadow-lg border ${toolTipBoxTW}`}
+          className={`absolute whitespace-nowrap py-1 px-2 z-10 dark:border-iOrange left-1/2 translate-x-[-50%] dark:bg-black dark:text-white bg-iOrange p-1 rounded-md text-sm shadow-lg border ${toolTipBoxTW}`}
           initial={{
             opacity: 0,
           }}

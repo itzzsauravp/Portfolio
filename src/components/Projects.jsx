@@ -2,7 +2,7 @@ import ProjectCard from "./ProjectCard";
 import { GrProjects } from "react-icons/gr";
 import { useState } from "react";
 import { useEffect } from "react";
-import { ProjectDetails } from "../data/staticData";
+import { ProjectDetails } from "../data/staticDataReactIcons";
 const Projects = () => {
   const [currIndex, setCurrIndex] = useState(0);
   const handleNext = () => {

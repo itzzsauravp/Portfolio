@@ -36,7 +36,7 @@ const Education = () => {
             </span>
             <span
               className={`${
-                !openAccordion[idx] && "hover:translate-x-4"
+                !openAccordion[idx] && "can-hover:hover:translate-x-4"
               } duration-200 ease-in-out text-lg`}
             >
               {edu.education}

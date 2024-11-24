@@ -10,6 +10,9 @@ export default {
         iMaroon: "#9B3922",
         iOrange: "#F2613F",
       },
+      screens: {
+        "can-hover": { raw: `(hover: hover)` },
+      },
     },
   },
   plugins: [],

@@ -20,7 +20,7 @@ const Hobbies = () => {
             toolTipBoxTW="top-[-45px]"
             toolTipPointerTW="border-b border-r bottom-[-7px]"
           >
-            <div className="border p-3 rounded-full dark:border-black hover:text-black hover:bg-white">
+            <div className="border p-3 rounded-full dark:border-black can-hover:hover:text-black can-hover:hover:bg-white">
               <a href={item.link} className="text-3xl">
                 {item.icon}
               </a>
